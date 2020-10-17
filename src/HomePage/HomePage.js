@@ -1,6 +1,11 @@
 import React from 'react';
+import PieChart from '../PieChart/PieChart';
 
+import PieClass from "../D3Chart/D3Chart";
 function HomePage() {
+    const margin = {
+        top: 50, right: 50, bottom: 50, left: 50,
+    };
   return (
     <main className="container center">
 
@@ -73,11 +78,17 @@ function HomePage() {
 
         <div class="text-box">
             <h1>Chart</h1>
-            <p>
-                <canvas id="myChart" width="400" height="400"></canvas> 
-            </p>
+                {/* <canvas id="myChart" width="400" height="400"></canvas>  */}
+                <PieChart/>
+            
         </div>
-
+        <div>
+            <h1>D3JS Chart</h1>
+            <PieClass
+            innerRadius={80}
+            outerRadius={200}
+            margin={margin}/>
+      </div>
     </div>
 
 </main>
